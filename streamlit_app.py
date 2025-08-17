@@ -2,9 +2,11 @@ import streamlit as st
 
 # Título e informações iniciais
 st.title("Análise de Emoções em Alunos")
-st.write("Autor: Felippe de Abreu")
 st.write("Pós-graduação em Mineração de Dados Educacionais")
-
+st.write("Instituto Federal do Espírito Santo - Campus Serra")
+st.write("Professor: Maxwell Monteiro")
+st.write("Disciplina: Ferramentas e Soluções em Núvem")
+st.write("Autor: Felippe de Abreu")
 
 
 
