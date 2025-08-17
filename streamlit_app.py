@@ -13,17 +13,30 @@ pagina = st.sidebar.radio("Escolha uma seção:",
 if pagina == "Introdução":
     st.header("Introdução")
 
-
     st.title("Análise de Emoções em Alunos")
-    st.write("Pós-graduação em Mineração de Dados Educacionais")
-    st.write("Instituto Federal do Espírito Santo - Campus Serra")
-    st.write("Professor: Maxwell Monteiro")
-    st.write("Disciplina: Ferramentas e Soluções em Núvem")
-    st.write("Autor: Felippe de Abreu")
-    st.write("""
-        Este app tem como objetivo analisar as emoções dos alunos
-        e relacioná-las com possíveis problemas de desempenho e risco de evasão escolar.
+
+    st.markdown("""
+    Esta aplicação apresenta um projeto desenvolvido como parte da avaliação da disciplina 
+    de **Ferramentas e Soluções em Nuvem** na Pós-graduação em **Mineração de Dados Educacionais** do **Instituto Federal do Espírito Santo - Campus Serra**.
+
+    **Professor:** Maxwell Monteiro  
+    **Aluno:** Felippe de Abreu  
+
+    ---
+    ### Objetivo do Projeto
+    O objetivo é criar um painel interativo para visualização e análise das emoções dos alunos, 
+    buscando identificar padrões emocionais que possam estar relacionados ao desempenho acadêmico 
+    e ao risco de evasão escolar.
+
+    ---
+    ### Fonte dos Dados
+    Para este protótipo inicial, estão sendo utilizados:
+    - **Dataset simulado** contendo expressões faciais (feliz, medo, nervoso, neutro, nojo e triste), 
+      junto com indicadores de frequência e desempenho escolar;
+    - Bases públicas como **FER2013** (reconhecimento de emoções) e **Student Performance Dataset** (UCI), 
+      que poderão ser integradas em versões futuras.
     """)
+
 
 elif pagina == "Base de Dados":
     st.header("Base de Dados")
@@ -35,6 +48,15 @@ elif pagina == "Base de Dados":
     st.write("No futuro, os dados coletados de alunos reais poderão ser integrados.")
 
 
+
+elif pagina == "TESTES":
+    st.header("TESTES")
+    st.write("""
+        TESTES
+    """)
+    st.write("")
+    
+    
     import pandas as pd
 
     # Carregar dataset
