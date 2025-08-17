@@ -49,7 +49,7 @@ elif pagina == "Futuras Expansões":
 import pandas as pd
 
 # Carregar dataset
-df = pd.read_csv("alunos_emocoes.csv")
+df = pd.read_csv("alunos_emocoes_100.csv")
 
 st.header("Exemplo de Base de Dados")
 st.dataframe(df)
