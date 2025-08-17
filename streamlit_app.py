@@ -1,6 +1,7 @@
 import streamlit as st
 
 
+st.set_page_config(page_title="Análise de Emoções em Alunos", page_icon="📊")
 
 
 # Menu lateral
