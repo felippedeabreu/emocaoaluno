@@ -5,6 +5,10 @@ st.title("Análise de Emoções em Alunos")
 st.write("Autor: Felippe de Abreu")
 st.write("Pós-graduação em Mineração de Dados Educacionais")
 
+
+
+
+
 # Menu lateral
 st.sidebar.title("Navegação")
 pagina = st.sidebar.radio("Escolha uma seção:", 
@@ -39,6 +43,7 @@ elif pagina == "Futuras Expansões":
         - Correlação entre emoções, desempenho acadêmico e evasão escolar;
         - Dashboard interativo com filtros por turma, disciplina e período.
     """)
+
 import pandas as pd
 
 # Carregar dataset
