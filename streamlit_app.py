@@ -1,13 +1,5 @@
 import streamlit as st
 
-# Título e informações iniciais
-st.title("Análise de Emoções em Alunos")
-st.write("Pós-graduação em Mineração de Dados Educacionais")
-st.write("Instituto Federal do Espírito Santo - Campus Serra")
-st.write("Professor: Maxwell Monteiro")
-st.write("Disciplina: Ferramentas e Soluções em Núvem")
-st.write("Autor: Felippe de Abreu")
-
 
 
 
@@ -19,6 +11,14 @@ pagina = st.sidebar.radio("Escolha uma seção:",
 # Conteúdo das páginas
 if pagina == "Introdução":
     st.header("Introdução")
+
+
+    st.title("Análise de Emoções em Alunos")
+    st.write("Pós-graduação em Mineração de Dados Educacionais")
+    st.write("Instituto Federal do Espírito Santo - Campus Serra")
+    st.write("Professor: Maxwell Monteiro")
+    st.write("Disciplina: Ferramentas e Soluções em Núvem")
+    st.write("Autor: Felippe de Abreu")
     st.write("""
         Este app tem como objetivo analisar as emoções dos alunos
         e relacioná-las com possíveis problemas de desempenho e risco de evasão escolar.
@@ -33,6 +33,22 @@ elif pagina == "Base de Dados":
     """)
     st.write("No futuro, os dados coletados de alunos reais poderão ser integrados.")
 
+
+    import pandas as pd
+
+    # Carregar dataset
+    df = pd.read_csv("alunos_emocoes_100.csv")
+
+    st.header("Exemplo de Base de Dados")
+    st.dataframe(df)
+
+    # Exemplo de gráfico: distribuição das emoções
+    st.subheader("Distribuição das Emoções")
+    st.bar_chart(df["expressao"].value_counts())
+
+
+    
+
 elif pagina == "Visualizações":
     st.header("Visualizações")
     st.write("Aqui serão apresentados gráficos interativos, por exemplo:")
@@ -46,14 +62,3 @@ elif pagina == "Futuras Expansões":
         - Dashboard interativo com filtros por turma, disciplina e período.
     """)
 
-import pandas as pd
-
-# Carregar dataset
-df = pd.read_csv("alunos_emocoes_100.csv")
-
-st.header("Exemplo de Base de Dados")
-st.dataframe(df)
-
-# Exemplo de gráfico: distribuição das emoções
-st.subheader("Distribuição das Emoções")
-st.bar_chart(df["expressao"].value_counts())
